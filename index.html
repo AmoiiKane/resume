@@ -200,7 +200,11 @@
             transition: all 0.3s ease;
         }
         
-    
+        .download-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
         
         @media (max-width: 600px) {
             .contact-info {
@@ -226,7 +230,7 @@
     </style>
 </head>
 <body>
-    
+    <button class="download-btn no-print" onclick="downloadPDF()">📥 Télécharger PDF</button>
     
     <div class="header">
         <h1>Mouad Ammi</h1>
