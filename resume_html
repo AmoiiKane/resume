@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV de Mouad Ammi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f8;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      text-align: center;
+      padding-bottom: 30px;
+      border-bottom: 2px solid #eaeaea;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: #4b6cb7;
+    }
+    .header h2 {
+      font-weight: 400;
+      font-size: 1.2em;
+      color: #888;
+    }
+    .contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .contact div {
+      font-size: 0.95em;
+    }
+    section {
+      margin-top: 40px;
+    }
+    section h3 {
+      color: #4b6cb7;
+      text-transform: uppercase;
+      font-size: 1.3em;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    .item {
+      margin-bottom: 20px;
+    }
+    .item-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .item-title h4 {
+      margin: 0;
+      font-size: 1.1em;
+      color: #4b6cb7;
+    }
+    .item-title span {
+      font-size: 0.9em;
+      background: #4b6cb7;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .item p {
+      margin-top: 8px;
+      font-size: 0.95em;
+    }
+    .skills, .languages, .soft-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tag {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-size: 0.85em;
+      font-weight: 500;
+    }
+    .lang-box {
+      flex: 1 1 120px;
+      background: #f1f1f1;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .lang-box h4 {
+      margin: 0;
+      color: #4b6cb7;
+    }
+    .lang-box p {
+      margin: 5px 0 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Mouad Ammi</h1>
+      <h2>Ingénieur Logiciel</h2>
+      <div class="contact">
+        <div>📍 Rabat</div>
+        <div>📞 +212 634518332</div>
+        <div>✉️ amoiikane03@gmail.com</div>
+        <div>💼 <a href="https://linkedin.com/in/mouad-ammi-b03bab216" target="_blank">LinkedIn</a></div>
+        <div>💻 <a href="https://github.com/AmoiiKane" target="_blank">GitHub</a></div>
+      </div>
+    </div>
+
+    <section>
+      <h3>Profil</h3>
+      <p>Ingénieur logiciel polyvalent avec compétences en développement frontend/backend, maîtrise de C, Python, HTML, CSS, JavaScript et Solidity. Expérimenté avec Git, GitHub, Oracle, SQL et Linux. Excellente aptitude à la résolution de problèmes et au travail d'équipe dans des environnements techniques complexes.</p>
+    </section>
+
+    <section>
+      <h3>Formation</h3>
+      <div class="item">
+        <div class="item-title">
+          <h4>Diplôme en Ingénierie Logicielle - ALX Africa</h4>
+          <span>2022-2023</span>
+        </div>
+        <p>Programme intensif de 12 mois en développement full-stack. Projets réels, collaboration entre pairs, développement personnel et accès à une communauté tech mondiale.</p>
+      </div>
+      <div class="item">
+        <div class="item-title">
+          <h4>Diplôme en Développement Web - Pro-systems</h4>
+          <span>2020-2022</span>
+        </div>
+        <p>Formation en C, Java, Linux, Oracle, SQL, réseaux, gestion des stocks et fiscalité. Solide base en développement logiciel et IT.</p>
+      </div>
+      <div class="item">
+        <div class="item-title">
+          <h4>Baccalauréat en Physique - Lycée Hassan 2</h4>
+          <span>2019-2020</span>
+        </div>
+        <p>Formation en physique, mathématiques et enquête scientifique. Compétences analytiques renforcées par des travaux pratiques.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>Compétences Techniques</h3>
+      <div class="skills">
+        <span class="tag">C</span>
+        <span class="tag">Python</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Solidity</span>
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Bootstrap</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Oracle</span>
+        <span class="tag">SQL</span>
+      </div>
+    </section>
+
+    <section>
+      <h3>Compétences Transversales</h3>
+      <div class="soft-skills">
+        <span class="tag">Collaboration</span>
+        <span class="tag">Résolution de problèmes</span>
+        <span class="tag">Gestion du temps</span>
+        <span class="tag">Motivation</span>
+        <span class="tag">Leadership</span>
+        <span class="tag">Communication</span>
+      </div>
+    </section>
+
+    <section>
+      <h3>Langues</h3>
+      <div class="languages">
+        <div class="lang-box">
+          <h4>Anglais</h4>
+          <p>Couramment</p>
+        </div>
+        <div class="lang-box">
+          <h4>Français</h4>
+          <p>Très bien</p>
+        </div>
+        <div class="lang-box">
+          <h4>Arabe</h4>
+          <p>Langue maternelle</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
