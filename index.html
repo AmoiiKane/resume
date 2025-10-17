@@ -1,388 +1,406 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Mouad Ammi</title>
+    <title>Mouad Ammi - Software Engineer</title>
     <style>
-        @media print {
-            body { margin: 0; }
-            .no-print { display: none; }
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.4;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-        }
-        
-        .header {
-            text-align: center;
-            background: linear-gradient(135deg, #020513 0%, #764ba2 100%);
-            color: white;
-            padding: 30px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        
-        .header h1 {
+        * {
             margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        .header h2 {
-            margin: 10px 0;
-            font-size: 1.3em;
-            font-weight: 300;
-            opacity: 0.9;
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a3f 100%);
+        color: #e0e0e0;
+        line-height: 1.6;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(20, 20, 40, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(100, 200, 255, 0.2);
+        border-radius: 12px;
+        padding: 50px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    header {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid rgba(100, 200, 255, 0.3);
+    }
+
+    h1 {
+        font-size: 3em;
+        font-weight: 700;
+        background: linear-gradient(135deg, #00d4ff, #64b5f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 8px;
+    }
+
+    .title {
+        font-size: 1.3em;
+        color: #64b5f6;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 0.95em;
+        color: #b0b0d0;
+    }
+
+    .contact-info a {
+        color: #00d4ff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+        color: #64b5f6;
+    }
+
+    section {
+        margin-bottom: 35px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #00d4ff;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        padding-left: 15px;
+    }
+
+    h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #00d4ff, #64b5f6);
+        border-radius: 2px;
+    }
+
+    .summary {
+        background: rgba(100, 200, 255, 0.08);
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #64b5f6;
+        color: #d0d0e0;
+        font-size: 0.95em;
+        line-height: 1.8;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .skill-category {
+        background: rgba(100, 200, 255, 0.05);
+        padding: 18px;
+        border-radius: 8px;
+        border: 1px solid rgba(100, 200, 255, 0.15);
+        transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .skill-category:hover {
+        transform: translateY(-2px);
+        border-color: rgba(100, 200, 255, 0.4);
+    }
+
+    .skill-category h3 {
+        color: #00d4ff;
+        font-size: 1em;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .skill-category p {
+        color: #b0b0d0;
+        font-size: 0.9em;
+        line-height: 1.7;
+    }
+
+    .experience-item, .education-item, .project-item {
+        background: rgba(100, 200, 255, 0.05);
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid rgba(100, 200, 255, 0.1);
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+
+    .experience-item:hover, .education-item:hover, .project-item:hover {
+        border-color: rgba(100, 200, 255, 0.3);
+        background: rgba(100, 200, 255, 0.1);
+    }
+
+    .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 12px;
+    }
+
+    .item-title {
+        font-size: 1.15em;
+        font-weight: 600;
+        color: #00d4ff;
+    }
+
+    .item-subtitle {
+        color: #64b5f6;
+        font-size: 0.95em;
+        font-style: italic;
+    }
+
+    .item-date {
+        color: #888;
+        font-size: 0.9em;
+        white-space: nowrap;
+    }
+
+    .item-description {
+        color: #b0b0d0;
+        font-size: 0.95em;
+        line-height: 1.7;
+        margin-bottom: 12px;
+    }
+
+    .highlights {
+        list-style: none;
+    }
+
+    .highlights li {
+        color: #a0a0c0;
+        font-size: 0.9em;
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .highlights li::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #00d4ff;
+        font-weight: bold;
+    }
+
+    .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .badge {
+        display: inline-block;
+        background: linear-gradient(135deg, rgba(100, 200, 255, 0.2), rgba(0, 212, 255, 0.1));
+        color: #64b5f6;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        border: 1px solid rgba(100, 200, 255, 0.3);
+        font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 30px;
         }
-        
+
+        h1 {
+            font-size: 2.2em;
+        }
+
         .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 15px;
-            font-size: 0.95em;
+            flex-direction: column;
+            gap: 10px;
         }
-        
-        .contact-info span {
-            background: rgba(255,255,255,0.2);
-            padding: 5px 12px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
+
+        .item-header {
+            flex-direction: column;
         }
-        
-        .section {
-            margin-bottom: 25px;
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #020513;
+
+        .item-date {
+            margin-top: 8px;
         }
-        
-        .section h3 {
-            color: #020513;
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 5px;
-        }
-        
-        .profile-section {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-        }
-        
-        .profile-section h3 {
-            color: white;
-            border-bottom-color: rgba(255,255,255,0.3);
-        }
-        
-        .education-item, .experience-item {
-            margin-bottom: 20px;
-            padding: 15px;
+    }
+
+    @media print {
+        body {
             background: white;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 0;
         }
-        
-        .education-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .degree {
-            font-weight: bold;
-            color: #020513;
-            font-size: 1.1em;
-        }
-        
-        .institution {
-            color: #666;
-            font-style: italic;
-        }
-        
-        .date {
-            background: #020513;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            font-weight: bold;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .skill-category {
+
+        .container {
             background: white;
-            padding: 15px;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .skill-category h4 {
-            color: #020513;
-            margin-bottom: 10px;
-            font-size: 1em;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        
-        .skill-tag {
-            background: linear-gradient(135deg, #020513, #764ba2);
-            color: white;
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            font-weight: 500;
-        }
-        
-        .languages {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .language-item {
-            text-align: center;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            min-width: 120px;
-        }
-        
-        .language-name {
-            font-weight: bold;
-            color: #020513;
-            margin-bottom: 5px;
-        }
-        
-        .language-level {
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        .download-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #020513;
-            color: white;
-            padding: 12px 20px;
             border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-            transition: all 0.3s ease;
+            box-shadow: none;
+            max-width: 100%;
+            padding: 40px;
         }
-        
-        .download-btn:hover {
-            background: #5a67d8;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-        
-        @media (max-width: 600px) {
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .education-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .date {
-                margin-top: 5px;
-            }
-            
-            .download-btn {
-                position: static;
-                width: 100%;
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <button class="download-btn no-print" onclick="downloadPDF()">📥 Télécharger PDF</button>
-    
-    <div class="header">
-        <h1>Mouad Ammi</h1>
-        <h2>Ingénieur Logiciel</h2>
-        <div class="contact-info">
-            <span>📍 Rabat</span>
-            <span>📞 +212 634518332</span>
-            <span>✉️ amoiikane03@gmail.com</span>
-        </div>
-        <div class="contact-info">
-            <span>💼 LinkedIn: linkedin.com/in/mouad-ammi-b03bab216/</span>
-            <span>💻 GitHub: github.com/AmoiiKane</span>
-        </div>
-    </div>
-
-    <div class="section profile-section">
-        <h3>Profil Professionnel</h3>
-        <p>Ingénieur logiciel polyvalent et motivé avec une solide base en développement web et programmation. Expérimenté en développement frontend et backend, avec une maîtrise des langages tels que C, Python, HTML, CSS, JavaScript et Solidity. Compétent dans l'utilisation d'outils comme Git et GitHub pour le contrôle de version et la collaboration. Possède des connaissances en systèmes de gestion de bases de données incluant Oracle et SQL, ainsi qu'une familiarité avec les systèmes d'exploitation Linux. Habile en résolution de problèmes et collaboration, avec une capacité démontrée à relever des défis techniques complexes et livrer des solutions de haute qualité. Couramment anglophone, avec un engagement vers l'apprentissage continu et la croissance professionnelle.</p>
-    </div>
-
-    <div class="section">
-        <h3>Formation</h3>
-        
-        <div class="education-item">
-            <div class="education-header">
-                <div>
-                    <div class="degree">DIPLÔME EN INGÉNIERIE LOGICIELLE</div>
-                    <div class="institution">ALX Africa</div>
-                </div>
-                <div class="date">2022-2023</div>
+    <div class="container">
+        <header>
+            <h1>MOUAD AMMI</h1>
+            <p class="title">Software Engineer</p>
+            <div class="contact-info">
+                <span>📍 Rabat, Morocco</span>
+                <span>📞 +212 634518332</span>
+                <span>✉️ <a href="mailto:amoiikane03@gmail.com">amoiikane03@gmail.com</a></span>
+                <span>🔗 <a href="https://github.com/Amoiikane" target="_blank">GitHub</a></span>
+                <span>💼 <a href="https://www.linkedin.com/in/mouad-ammi-b03bab216/" target="_blank">LinkedIn</a></span>
             </div>
-            <p>J'ai complété le programme rigoureux de 12 mois d'ingénierie logicielle ALX, où j'ai acquis une expertise complète en développement full-stack, maîtrisant les technologies frontend et backend. Tout au long du programme, j'ai participé à de nombreux projets pratiques qui ont affiné ma capacité à concevoir, construire et déployer des solutions logicielles du monde réel. J'ai également développé de solides compétences en résolution de problèmes, communication et leadership dans un environnement collaboratif dirigé par les pairs. En tant que diplômé, je fais maintenant partie d'une communauté mondiale de talents technologiques, avec accès au développement professionnel continu et aux opportunités de carrière.</p>
+        </header>
+    <section>
+        <h2>About</h2>
+        <div class="summary">
+            Results-driven Software Engineer with strong expertise in full-stack web development and systems programming. Proficient in C, Python, and JavaScript with proven ability to design, develop, and deploy scalable applications. Combines technical depth in low-level systems programming with modern web development practices. Passionate about clean code and continuous learning.
         </div>
+    </section>
 
-        <div class="education-item">
-            <div class="education-header">
-                <div>
-                    <div class="degree">DIPLÔME EN DÉVELOPPEMENT WEB</div>
-                    <div class="institution">Pro-systems</div>
-                </div>
-                <div class="date">2020-2022</div>
-            </div>
-            <p>Pendant mon programme de diplôme chez Pro-systems, j'ai reçu une formation complète dans divers langages de programmation et technologies essentielles au développement logiciel. Le curriculum couvrait un large éventail de sujets, incluant la programmation C, Java, le système d'exploitation Linux, la gestion de base de données Oracle, les requêtes SQL, et les fondamentaux des réseaux. De plus, j'ai acquis de précieuses connaissances sur les principes généraux de taxation et la gestion des stocks grâce à des cours spécialisés. Ce programme diversifié et rigoureux m'a fourni une base solide en programmation et compétences IT, me préparant pour une carrière réussie dans l'industrie technologique.</p>
-        </div>
-
-        <div class="education-item">
-            <div class="education-header">
-                <div>
-                    <div class="degree">BACCALAURÉAT EN PHYSIQUE</div>
-                    <div class="institution">Lycée Hassan 2</div>
-                </div>
-                <div class="date">2019-2020</div>
-            </div>
-            <p>Complété un curriculum rigoureux en physique durant le lycée, se concentrant sur les principes fondamentaux de la physique, des mathématiques et de l'enquête scientifique. Développé de solides compétences analytiques et de résolution de problèmes à travers des expériences de laboratoire pratiques et des cours théoriques. Acquis une base solide dans des domaines tels que la mécanique, l'électromagnétisme et la physique newtonienne. Participé à des activités extrascolaires liées aux sciences et mathématiques, renforçant davantage la compréhension et l'intérêt dans le domaine.</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <h3>Compétences Techniques</h3>
+    <section>
+        <h2>Technical Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h4>Langages de Programmation</h4>
-                <div class="skill-list">
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">Solidity</span>
-                </div>
+                <h3>Languages</h3>
+                <p>C • Python • JavaScript • HTML • CSS • Bash</p>
             </div>
-            
             <div class="skill-category">
-                <h4>Développement Logiciel</h4>
-                <div class="skill-list">
-                    <span class="skill-tag">Développement Web</span>
-                    <span class="skill-tag">Développement Frontend</span>
-                    <span class="skill-tag">Développement Backend</span>
-                    <span class="skill-tag">Développement de compilateurs</span>
-                </div>
+                <h3>Frameworks & Tools</h3>
+                <p>Node.js • Git • GitHub • Bootstrap • Agile</p>
             </div>
-            
             <div class="skill-category">
-                <h4>Technologies et Outils</h4>
-                <div class="skill-list">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Linux</span>
-                </div>
+                <h3>Databases</h3>
+                <p>Oracle • SQL</p>
             </div>
-            
             <div class="skill-category">
-                <h4>Gestion de Bases de Données</h4>
-                <div class="skill-list">
-                    <span class="skill-tag">Oracle</span>
-                    <span class="skill-tag">SQL</span>
-                </div>
+                <h3>Core Competencies</h3>
+                <p>Full-stack Development • Algorithms & Data Structures • System Design • DevOps</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <h3>Compétences Transversales</h3>
-        <div class="skill-list">
-            <span class="skill-tag">Collaboration</span>
-            <span class="skill-tag">Résolution de problèmes</span>
-            <span class="skill-tag">Gestion du temps</span>
-            <span class="skill-tag">Motivation</span>
-            <span class="skill-tag">Leadership</span>
-            <span class="skill-tag">Communication</span>
-        </div>
-    </div>
-
-    <div class="section">
-        <h3>Langues</h3>
-        <div class="languages">
-            <div class="language-item">
-                <div class="language-name">Anglais</div>
-                <div class="language-level">Couramment</div>
+    <section>
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Software Engineer</div>
+                    <div class="item-subtitle">ALX Africa</div>
+                </div>
+                <div class="item-date">2022 – 2023</div>
             </div>
-            <div class="language-item">
-                <div class="language-name">Français</div>
-                <div class="language-level">Très bien</div>
-            </div>
-            <div class="language-item">
-                <div class="language-name">Arabe</div>
-                <div class="language-level">Langue maternelle</div>
+            <div class="item-description">Intensive 12-month software engineering program with hands-on experience in full-stack development and systems programming.</div>
+            <ul class="highlights">
+                <li>Developed and deployed full-stack web applications using Git, GitHub, and Agile methodologies</li>
+                <li>Implemented systems-level programming projects emphasizing memory management and data structures</li>
+                <li>Collaborated on peer-reviewed projects with focus on code quality and professional standards</li>
+                <li>Strengthened problem-solving and technical leadership through intensive project-based learning</li>
+            </ul>
+            <div class="badges">
+                <span class="badge">Full-Stack Development</span>
+                <span class="badge">C Programming</span>
+                <span class="badge">Python</span>
+                <span class="badge">Git/GitHub</span>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        function downloadPDF() {
-            // Hide the download button
-            const downloadBtn = document.querySelector('.download-btn');
-            downloadBtn.style.display = 'none';
-            
-            // Trigger print dialog
-            window.print();
-            
-            // Show the button again after a delay
-            setTimeout(() => {
-                downloadBtn.style.display = 'block';
-            }, 1000);
-        }
-        
-        // Auto-adjust for mobile
-        if (window.innerWidth <= 600) {
-            document.body.style.padding = '10px';
-        }
-    </script>
+    <section>
+        <h2>Education</h2>
+        <div class="education-item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">ALX Africa – Software Engineering Program</div>
+                </div>
+                <div class="item-date">2022 – 2023</div>
+            </div>
+            <div class="item-description">Comprehensive full-stack development program covering front-end and back-end technologies, software design principles, and collaborative development practices.</div>
+        </div>
+        <div class="education-item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Pro-systems – Web Development Degree</div>
+                </div>
+                <div class="item-date">2020 – 2022</div>
+            </div>
+            <div class="item-description">Core software development principles: C, Python, HTML, CSS, JavaScript, Oracle, SQL, Linux, and networking fundamentals.</div>
+        </div>
+        <div class="education-item">
+            <div class="item-header">
+                <div>
+                    <div class="item-title">Hassan II High School – Bachelor's in Physics</div>
+                </div>
+                <div class="item-date">2019 – 2020</div>
+            </div>
+            <div class="item-description">Analytical and problem-solving foundation through physics and mathematics coursework.</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Featured Projects</h2>
+        <div class="project-item">
+            <div class="item-title">printf – C Programming</div>
+            <div class="item-description">Reimplemented the standard printf function to handle formatted output using variadic functions and dynamic memory allocation.</div>
+            <div class="badges">
+                <span class="badge">C</span>
+                <span class="badge">Memory Management</span>
+                <span class="badge">Function Pointers</span>
+            </div>
+        </div>
+        <div class="project-item">
+            <div class="item-title">monty – Bytecode Interpreter</div>
+            <div class="item-description">Engineered a stack/queue-based bytecode interpreter capable of executing machine-like opcodes with advanced data structure implementation.</div>
+            <div class="badges">
+                <span class="badge">C</span>
+                <span class="badge">Data Structures</span>
+                <span class="badge">Parsing</span>
+            </div>
+        </div>
+        <div class="project-item">
+            <div class="item-title">Sorting Algorithms – Algorithm Optimization</div>
+            <div class="item-description">Implemented multiple sorting algorithms (Quick Sort, Merge Sort, Insertion Sort, Bubble Sort) with focus on optimization and complexity analysis.</div>
+            <div class="badges">
+                <span class="badge">C</span>
+                <span class="badge">Algorithms</span>
+                <span class="badge">Big O Analysis</span>
+            </div>
+        </div>
+        <div class="project-item">
+            <div class="item-title">Systems Programming – Low-Level Development</div>
+            <div class="item-description">Completed comprehensive projects involving pointers, recursion, and memory management. Advanced debugging using gdb and Valgrind.</div>
+            <div class="badges">
+                <span class="badge">C</span>
+                <span class="badge">Debugging</span>
+                <span class="badge">Pointers</span>
+            </div>
+        </div>
+    </section>
+</div>
 </body>
 </html>
